@@ -22,7 +22,7 @@ function setup() {
 	//packageBody = Bodies.circle(width/2 , 200 , 5 , {restitution:1.5, isStatic:false});
 	//World.add(world, packageBody);
 	
-	dustbin = new Dustbin(600,500);
+	dustbin = new Dustbin();
 	
 	//Create a Ground
 	ground = Bodies.rectangle(width/2, 650, width, 5 , {isStatic:true} );
@@ -34,7 +34,7 @@ function setup() {
 	//Ground = createSprite(width/2, 665, width, 10 , {isStatic:true});
 	//Ground.shapeColor=color("yellow");
 	
-	paper = new Paper(130,600,15);
+	paper = new Paper(130,580,15);
 	//Engine.run(engine);
   
 }
@@ -53,7 +53,7 @@ function draw() {
 }
 function keyPressed() { 
 	if (keyCode === UP_ARROW) {
-	 Body.applyForce(paper.body, paper.body.position, { x: 23, y: -23 });
+	 Body.applyForce(paper.body, paper.body.position, { x: 30, y: -45 });
 	 }
 	 }
 

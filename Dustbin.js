@@ -1,24 +1,27 @@
 class Dustbin {
-  constructor(x, y) {
+  constructor() {
       var options = {
           'restitution': 0.8,
           'friction': 1,
           'density': 1.0
       }
-      this.body1 = Bodies.rectangle(x, y, 200, 20, options);
+      this.body1 = Bodies.rectangle(640,640,200,20, options);
       this.width1 = 200;
       this.height1 = 20;
 
-      this.body2 = Bodies.rectangle(this.body1.position.x - 100, this.body1.position.y - 90, 20, 200, options);
+      this.body2 = Bodies.rectangle(540,600,25,100, options);
+          //this.body1.position.x - 100, this.body1.position.y - 90, 20, 200, options);
       this.width2 = 20;
       this.height2 = 200;
 
-      this.body3 = Bodies.rectangle(this.body1.position.x + 100, this.body1.position.y - 90, 20, 200, options);
+      this.body3 = Bodies.rectangle(740,600,25,100, options);
+          //this.body1.position.x + 100, this.body1.position.y - 90, 20, 200, options
       this.width3 = 20;
       this.height3 = 200;
 
 
-      this.image = loadImage("pics/bin.png")
+      this.image = loadImage("pics/dustbingreen.png")
+      
 
 
       Matter.Body.setStatic(this.body1, true);
